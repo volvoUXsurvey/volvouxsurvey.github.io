@@ -1,0 +1,134 @@
+<html>
+    <head>
+         <meta http-equiv="refresh" content="60" >
+         <title>IT EXPO - UX Survey</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+        <script src="tabletop.js"></script>
+        <!-- https://github.com/jsoma/tabletop -->
+        <script type="text/javascript">    
+            var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1DDXBPmlehalyusjCcXt2z2d6rSQrYAHxEW8HH203UxY/edit?usp=sharing";
+
+            function init() {
+                Tabletop.init( { key: publicSpreadsheetUrl,
+                                callback: showInfo,
+                                simpleSheet: true } )
+            }
+
+            function showInfo(data, tabletop) {
+                var question1Agree = 0;
+                var question2Agree = 0;
+                var question3Agree = 0;
+                var question4Agree = 0;
+                var question5Agree = 0;
+                var question6Agree = 0;
+                var question7Agree = 0;
+                var question8Agree = 0;
+                var question9Agree = 0;
+                var question10Agree = 0;
+                var question11Agree = 0;
+                var question12Agree = 0;
+                var question13Agree = 0;
+
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question1 >= 4) {
+                        question1Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question2 >= 4) {
+                        question2Agree++;
+                    }
+                }
+                 for (var i = 0; i < data.length; i++) {
+                    if (data[i].question3 >= 4) {
+                        question3Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question4 >= 4) {
+                        question4Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question5 >= 4) {
+                        question5Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question6 >= 4) {
+                        question6Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question7 >= 4) {
+                        question7Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question8 >= 4) {
+                        question8Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question9 >= 4) {
+                        question9Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question10 >= 4) {
+                        question10Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question11 >= 4) {
+                        question11Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question12 >= 4) {
+                        question12Agree++;
+                    }
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].question13 >= 4) {
+                        question13Agree++;
+                    }
+                }
+
+                document.getElementById("numberOfRows").innerHTML = "<strong>Number of surveys: </strong>" + data.length;
+                document.getElementById("question1Average").innerHTML = "<strong>" + (question1Agree / data.length) * 100 + "% of people agree with the first statement.</strong>";
+                document.getElementById("question2Average").innerHTML = "<strong>" + (question2Agree / data.length) * 100 + "% of people agree with the second statement.</strong>";
+                document.getElementById("question3Average").innerHTML = "<strong>" + (question3Agree / data.length) * 100 + "% of people agree with the third statement.</strong>";
+                document.getElementById("question4Average").innerHTML = "<strong>" + (question4Agree / data.length) * 100 + "% of people agree with the fourth statement.</strong>";
+                document.getElementById("question5Average").innerHTML = "<strong>" + (question5Agree / data.length) * 100 + "% of people agree with the fifth statement.</strong>";
+                document.getElementById("question6Average").innerHTML = "<strong>" + (question6Agree / data.length) * 100 + "% of people agree with the sixth statement.</strong>";
+                document.getElementById("question7Average").innerHTML = "<strong>" + (question7Agree / data.length) * 100 + "% of people agree with the seventh statement.</strong>";
+                document.getElementById("question8Average").innerHTML = "<strong>" + (question8Agree / data.length) * 100 + "% of people agree with the eighth statement.</strong>";
+                document.getElementById("question9Average").innerHTML = "<strong>" + (question9Agree / data.length) * 100 + "% of people agree with the ninth statement.</strong>";
+                document.getElementById("question10Average").innerHTML = "<strong>" + (question10Agree / data.length) * 100 + "% of people agree with the tenth statement.</strong>";
+                document.getElementById("question11Average").innerHTML = "<strong>" + (question11Agree / data.length) * 100 + "% of people agree with the eleventh statement.</strong>";
+                document.getElementById("question12Average").innerHTML = "<strong>" + (question12Agree / data.length) * 100 + "% of people agree with the twelfth statement.</strong>";
+                document.getElementById("question13Average").innerHTML = "<strong>" + (question13Agree / data.length) * 100 + "% of people agree with the thirteenth statement.</strong>";
+            }
+
+            window.addEventListener("DOMContentLoaded", init)
+        </script>
+    </head>
+    
+    <body>
+        <p id="numberOfRows"></p>
+        <p id="question1Average"></p>
+        <p id="question2Average"></p>
+        <p id="question3Average"></p>
+        <p id="question4Average"></p>
+        <p id="question5Average"></p>
+        <p id="question6Average"></p>
+        <p id="question7Average"></p>
+        <p id="question8Average"></p>
+        <p id="question9Average"></p>
+        <p id="question10Average"></p>
+        <p id="question11Average"></p>
+        <p id="question12Average"></p>
+        <p id="question13Average"></p>
+    </body>
+</html>
