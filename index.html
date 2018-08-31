@@ -1,8 +1,527 @@
 <html>
-    <head>
-            <title>IT EXPO - UX Survey</title>
-    </head>
-    <body style="margin:0px;padding:0px;overflow:hidden">
-            <iframe scrolling="yes" src="https://docs.google.com/forms/d/e/1FAIpQLSfBafDQejUX33INHgtFNGRTS-VAXiJLEIihSYm9UP_VzCG1gg/viewform?embedded=true"  frameborder="0" style="overflow:hidden;height:100%;width:100%">Loading...</iframe>
-    </body>
+
+<head>
+        <title>IT EXPO - UX Survey</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous"></script>
+        <script>
+                var submitted = false;
+                $("#bootstrapForm").submit(function (event) {
+                        event.preventDefault()
+                        var extraData = {}
+                        $("#bootstrapForm").ajaxSubmit({
+                                data: extraData,
+                                dataType: "jsonp",
+                                error: function () {
+                                        alert("Form Submitted. Thanks.")
+                                        window.location = "http://www.google.com"
+                                }
+                        })
+                })
+        </script>
+</head>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://dantekarlsson.com/IT_expo/display/ ';}"></iframe>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScU_CvT1WhyaH762VKMLSfeusonjbTczrzuhLrhZ_cWkWzj-g/formResponse"
+id="bootstrapForm"
+method="POST"
+        target="hidden_iframe" 
+        onsubmit="submitted=true;">
+        
+        <fieldset>
+                <h2>UXsurvey<br><small>Finish survey to find out what everyone else answered! Your participation is appreciated.</small></h2>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "1983651599" -->
+        <fieldset>
+                <legend for="1983651599">User Experience Design (UXD) is the art and science of generating positive emotions
+                        among users who interact with products or services</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.443346837" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.443346837" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.443346837" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.443346837" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.443346837" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "680202658" -->
+        <fieldset>
+                <legend for="680202658">User Experience (UX) is concerned with all aspects of the users experience when interacting
+                        with the product or service</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1472548514" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1472548514" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1472548514" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1472548514" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1472548514" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "572748769" -->
+        <fieldset>
+                <legend for="572748769">User Experience (UX) is important for projects at an early stage</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.125226593" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.125226593" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.125226593" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.125226593" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.125226593" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "869993221" -->
+        <fieldset>
+                <legend for="869993221">My team often discuss the end users needs</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1118510360" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1118510360" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1118510360" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1118510360" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1118510360" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "1983746000" -->
+        <fieldset>
+                <legend for="1983746000">It is best to involve end users early in a product’s or service’s process</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1010116599" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1010116599" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1010116599" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1010116599" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.1010116599" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "1444018437" -->
+        <fieldset>
+                <legend for="1444018437">User Experience (UX) increases return on investment (ROI)</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.836355163" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.836355163" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.836355163" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.836355163" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.836355163" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "2010253649" -->
+        <fieldset>
+                <legend for="2010253649">User Experience (UX) increases productivity and customer satisfaction</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.89169714" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.89169714" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.89169714" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.89169714" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.89169714" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "1204054878" -->
+        <fieldset>
+                <legend for="1204054878">User Experience (UX) can help a project leader by providing insight into user’s
+                        needs.</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.914475542" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.914475542" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.914475542" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.914475542" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.914475542" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "1506930536" -->
+        <fieldset>
+                <legend for="1506930536">User Experience (UX) can help making sure ideas are feasible to build.</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.2004166079" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.2004166079" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.2004166079" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.2004166079" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.2004166079" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "171165817" -->
+        <fieldset>
+                <legend for="171165817">User Experience (UX) can help by measuring outcomes that affect the business.</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.875856661" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.875856661" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.875856661" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.875856661" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.875856661" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "1838251510" -->
+        <fieldset>
+                <legend for="1838251510">User Experience (UX) can help by making products easier to use and streamlining
+                        processes.</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.4761697" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.4761697" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.4761697" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.4761697" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.4761697" value="Agree strongly" required> Agree strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "299905344" -->
+        <fieldset>
+                <legend for="299905344">User Experience (UX) can help by increasing revenue for user-centric products.</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.867782799" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.867782799" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.867782799" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.867782799" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.867782799" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+
+        <!-- Field type: "choices" id: "554378346" -->
+        <fieldset>
+                <legend for="554378346">User Experience (UX) can help by keeping end users informed without overwhelming
+                        them with information.</legend>
+                <div class="form-group">
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.787075311" value="Disagree strongly" required> Disagree
+                                        strongly
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.787075311" value="Disagree" required> Disagree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.787075311" value="Don&#x27;t know" required> Don&#x27;t
+                                        know
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.787075311" value="Agree" required> Agree
+                                </label>
+                        </div>
+                        <div class="radio">
+                                <label>
+                                        <input type="radio" name="entry.787075311" value="Agree strongly" required> Agree
+                                        strongly
+                                </label>
+                        </div>
+                </div>
+        </fieldset>
+
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="fbzx" value="7632341078636798673">
+        <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+        <input type="hidden" name="pageHistory" value="0">
+
+        <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
 </html>
