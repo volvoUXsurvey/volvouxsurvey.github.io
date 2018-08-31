@@ -1,9 +1,13 @@
 <html>
     <head>
          <meta http-equiv="refresh" content="60" >
+         <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>IT EXPO - UX Survey</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
         <script src="tabletop.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- https://github.com/jsoma/tabletop -->
         <script type="text/javascript">    
             var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1DDXBPmlehalyusjCcXt2z2d6rSQrYAHxEW8HH203UxY/edit?usp=sharing";
@@ -96,7 +100,7 @@
                 }
 
                 document.getElementById("numberOfRows").innerHTML = "<strong>Number of surveys: </strong>" + data.length;
-                document.getElementById("question1Average").innerHTML = "<strong>" + (question1Agree / data.length) * 100 + "% of people agree with the first statement.</strong>";
+                document.getElementById("question1Average").innerHTML = "<strong>" + (question1Agree / data.length) * 100 + "% AGREE";
                 document.getElementById("question2Average").innerHTML = "<strong>" + (question2Agree / data.length) * 100 + "% of people agree with the second statement.</strong>";
                 document.getElementById("question3Average").innerHTML = "<strong>" + (question3Agree / data.length) * 100 + "% of people agree with the third statement.</strong>";
                 document.getElementById("question4Average").innerHTML = "<strong>" + (question4Agree / data.length) * 100 + "% of people agree with the fourth statement.</strong>";
@@ -116,19 +120,25 @@
     </head>
     
     <body>
-        <p id="numberOfRows"></p>
-        <p id="question1Average"></p>
-        <p id="question2Average"></p>
-        <p id="question3Average"></p>
-        <p id="question4Average"></p>
-        <p id="question5Average"></p>
-        <p id="question6Average"></p>
-        <p id="question7Average"></p>
-        <p id="question8Average"></p>
-        <p id="question9Average"></p>
-        <p id="question10Average"></p>
-        <p id="question11Average"></p>
-        <p id="question12Average"></p>
-        <p id="question13Average"></p>
-    </body>
+
+            <div class="container" style="background-color:#EDEDED;">
+              <div class="jumbotron col-xs-8" style="height:40%; background-color:#EDEDED;">
+                <h1>So far in our survey...</h1>
+            
+                <h2><ul class="list-unstyled">
+              <li><strong><h1 id="question1Average">86% AGREE</strong></h1></li>
+              <li><h2>early <u>User Experience</u> will give</h2></li>
+                <ul><strong>
+                  <li>Increased revenue.</li>
+                  <li>Higher productivity.</li>
+                  <li>Higher ROI.</li>
+                </ul></strong>
+              </li>
+            </ul></h2>
+              </div>
+                <div class="jumbotron col-xs-4" style="background-color:#FFFFFF"><img src="http://dantekarlsson.com/IT_expo/github_qr.png" style="height:auto;width:100%;"></div>
+              <h1 class="col-xs-12" align="center" style="background-color:#627890; color:#FFFFFF">Join the survey and the discussion now,</h1>      
+              <h1 class="col-xs-12" align="center" style="background-color:#627890; color:#FFFFFF">help us help you!</h1>      
+            </div>
+            </body>
 </html>
