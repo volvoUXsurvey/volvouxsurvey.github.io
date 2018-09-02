@@ -1,0 +1,19 @@
+.form-group {
+    font-size: 5vw;
+  }
+h5 {
+    font-size: 5vw;
+    font-weight: bold;     
+    border-top: 1px solid black;
+}
+h1 {
+  font-size: 6vw;
+  font-weight: bold;
+}
+h2 {
+  font-size: 5.5vw;  
+}
+.btn {
+  width:100%;
+  font-weight: bold;
+}
