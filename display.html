@@ -130,45 +130,45 @@
             if (((question6Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question6Agree / data.length) * 100);
-                createListItem("Higher ROI.");
+                createListItem("Higher ROI");
             }
             if (((question7Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question7Agree / data.length) * 100);
-                createListItem("Increased productivity.");
+                createListItem("Increased productivity");
             }
             if (((question8Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question8Agree / data.length) * 100);
-                createListItem("Insights into user needs.");
+                createListItem("Insights into user needs");
             }
             if (((question9Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question9Agree / data.length) * 100);
-                createListItem("Higher project feasibility.");
+                createListItem("Higher project success rate");
             }
             if (((question10Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question10Agree / data.length) * 100);
-                createListItem("Business outcome predictions.");
+                createListItem("Business outcome predictions");
             }
             if (((question11Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question11Agree / data.length) * 100);
-                createListItem("Easy to use products.");
+                createListItem("Easy to use products");
             }
             if (((question12Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question12Agree / data.length) * 100);
-                createListItem("Increased revenue.");
+                createListItem("Increased revenue");
             }
             if (((question13Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
                 answersPrinted++;
                 totalPercentage = totalPercentage + ((question13Agree / data.length) * 100);
-                createListItem("Informed end users.");
+                createListItem("Informed end users");
             }
 
-            createListItem("And more.");
+            createListItem("And more");
             document.getElementById("question1Average").innerHTML = "<strong>" + Math.ceil((totalPercentage / answersPrinted)) + "% AGREE";
         }
 
