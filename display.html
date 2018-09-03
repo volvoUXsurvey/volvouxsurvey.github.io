@@ -1,147 +1,213 @@
 <html>
-    <head>
-         <meta http-equiv="refresh" content="60" >
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <title>IT EXPO - UX Survey</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
-        <script src="tabletop.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="displaystyle.css">
-        <!-- https://github.com/jsoma/tabletop -->
-        <script type="text/javascript">    
-            var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1DDXBPmlehalyusjCcXt2z2d6rSQrYAHxEW8HH203UxY/edit?usp=sharing";
 
-            function init() {
-                Tabletop.init( { key: publicSpreadsheetUrl,
-                                callback: showInfo,
-                                simpleSheet: true } )
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="60" >
+    <title>IT EXPO - UX Survey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script src="tabletop.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="displaystyle.css">
+    <!-- https://github.com/jsoma/tabletop -->
+    <script type="text/javascript">    
+        var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1VqMYRhizOulBRY428Gfun5mz3amPLZcVypb_PCIST00/edit?usp=sharing";
+
+        function init() {
+            Tabletop.init({
+                key: publicSpreadsheetUrl,
+                callback: showInfo,
+                simpleSheet: true
+            })
+        }
+
+        function createListItem(textToPrint) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(textToPrint);
+            node.appendChild(textnode);
+            document.getElementById("uxDoesList").appendChild(node);
+        }
+
+        function showInfo(data, tabletop) {
+            var question1Agree = 0;
+            var question2Agree = 0;
+            var question3Agree = 0;
+            var question4Agree = 0;
+            var question5Agree = 0;
+            var question6Agree = 0;
+            var question7Agree = 0;
+            var question8Agree = 0;
+            var question9Agree = 0;
+            var question10Agree = 0;
+            var question11Agree = 0;
+            var question12Agree = 0;
+            var question13Agree = 0;
+
+            var answersPrinted = 0;
+            var totalPercentage = 0;
+
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question1.indexOf("Agree") >= 0) {
+                    question1Agree++;
+                }
             }
 
-            function showInfo(data, tabletop) {
-                var question1Agree = 0;
-                var question2Agree = 0;
-                var question3Agree = 0;
-                var question4Agree = 0;
-                var question5Agree = 0;
-                var question6Agree = 0;
-                var question7Agree = 0;
-                var question8Agree = 0;
-                var question9Agree = 0;
-                var question10Agree = 0;
-                var question11Agree = 0;
-                var question12Agree = 0;
-                var question13Agree = 0;
-
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question1 >= 4) {
-                        question1Agree++;
-                    }
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question2.indexOf("Agree") >= 0) {
+                    question2Agree++;
                 }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question2 >= 4) {
-                        question2Agree++;
-                    }
-                }
-                 for (var i = 0; i < data.length; i++) {
-                    if (data[i].question3 >= 4) {
-                        question3Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question4 >= 4) {
-                        question4Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question5 >= 4) {
-                        question5Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question6 >= 4) {
-                        question6Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question7 >= 4) {
-                        question7Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question8 >= 4) {
-                        question8Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question9 >= 4) {
-                        question9Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question10 >= 4) {
-                        question10Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question11 >= 4) {
-                        question11Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question12 >= 4) {
-                        question12Agree++;
-                    }
-                }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].question13 >= 4) {
-                        question13Agree++;
-                    }
-                }
-
-                document.getElementById("numberOfRows").innerHTML = "<strong>Number of surveys: </strong>" + data.length;
-                document.getElementById("question1Average").innerHTML = "<strong>" + (question1Agree / data.length) * 100 + "% AGREE";
-                document.getElementById("question2Average").innerHTML = "<strong>" + (question2Agree / data.length) * 100 + "% of people agree with the second statement.</strong>";
-                document.getElementById("question3Average").innerHTML = "<strong>" + (question3Agree / data.length) * 100 + "% of people agree with the third statement.</strong>";
-                document.getElementById("question4Average").innerHTML = "<strong>" + (question4Agree / data.length) * 100 + "% of people agree with the fourth statement.</strong>";
-                document.getElementById("question5Average").innerHTML = "<strong>" + (question5Agree / data.length) * 100 + "% of people agree with the fifth statement.</strong>";
-                document.getElementById("question6Average").innerHTML = "<strong>" + (question6Agree / data.length) * 100 + "% of people agree with the sixth statement.</strong>";
-                document.getElementById("question7Average").innerHTML = "<strong>" + (question7Agree / data.length) * 100 + "% of people agree with the seventh statement.</strong>";
-                document.getElementById("question8Average").innerHTML = "<strong>" + (question8Agree / data.length) * 100 + "% of people agree with the eighth statement.</strong>";
-                document.getElementById("question9Average").innerHTML = "<strong>" + (question9Agree / data.length) * 100 + "% of people agree with the ninth statement.</strong>";
-                document.getElementById("question10Average").innerHTML = "<strong>" + (question10Agree / data.length) * 100 + "% of people agree with the tenth statement.</strong>";
-                document.getElementById("question11Average").innerHTML = "<strong>" + (question11Agree / data.length) * 100 + "% of people agree with the eleventh statement.</strong>";
-                document.getElementById("question12Average").innerHTML = "<strong>" + (question12Agree / data.length) * 100 + "% of people agree with the twelfth statement.</strong>";
-                document.getElementById("question13Average").innerHTML = "<strong>" + (question13Agree / data.length) * 100 + "% of people agree with the thirteenth statement.</strong>";
             }
 
-            window.addEventListener("DOMContentLoaded", init)
-        </script>
-    </head>
-    
-    <body>
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question3.indexOf("Agree") >= 0) {
+                    question3Agree++;
+                }
+            }
 
-            <div class="container col-xs-12" style="background-color:#EDEDED;">
-              <div class="col-xs-6" style="height:40%; background-color:#EDEDED;">
-                <h2>So far in our survey...</h2>
-            
-                <ul class="list-unstyled">
-              <li><strong><h1 id="question1Average">86% AGREE</strong></h1></li>
-              <li><h3>that early <u>User Experience</u> will give</h3></li>
-                <ul><strong><h4>
-                  <li>Increased revenue.</li>
-                  <li>Higher productivity.</li>
-                  <li>Higher ROI.</li>
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question4.indexOf("Agree") >= 0) {
+                    question4Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question5.indexOf("Agree") >= 0) {
+                    question5Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question6.indexOf("Agree") >= 0) {
+                    question6Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question7.indexOf("Agree") >= 0) {
+                    question7Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question8.indexOf("Agree") >= 0) {
+                    question8Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question9.indexOf("Agree") >= 0) {
+                    question9Agree++;
+                }
+            }
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question10.indexOf("Agree") >= 0) {
+                    question10Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question11.indexOf("Agree") >= 0) {
+                    question11Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question12.indexOf("Agree") >= 0) {
+                    question12Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question13.indexOf("Agree") >= 0) {
+                    question13Agree++;
+                }
+            }
+            var limit = 80;
+            var printLimit = 4;
+
+            if (((question6Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question6Agree / data.length) * 100);
+                createListItem("Higher ROI.");
+            }
+            if (((question7Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question7Agree / data.length) * 100);
+                createListItem("Increased productivity.");
+            }
+            if (((question8Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question8Agree / data.length) * 100);
+                createListItem("Insights into user needs.");
+            }
+            if (((question9Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question9Agree / data.length) * 100);
+                createListItem("Higher project feasibility.");
+            }
+            if (((question10Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question10Agree / data.length) * 100);
+                createListItem("Business outcome predictions.");
+            }
+            if (((question11Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question11Agree / data.length) * 100);
+                createListItem("Easy to use products.");
+            }
+            if (((question12Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question12Agree / data.length) * 100);
+                createListItem("Increased revenue.");
+            }
+            if (((question13Agree / data.length) * 100) >= limit && answersPrinted < printLimit) {
+                answersPrinted++;
+                totalPercentage = totalPercentage + ((question13Agree / data.length) * 100);
+                createListItem("Informed end users.");
+            }
+
+            createListItem("And more.");
+            document.getElementById("question1Average").innerHTML = "<strong>" + Math.ceil((totalPercentage / answersPrinted)) + "% AGREE";
+        }
+
+        window.addEventListener("DOMContentLoaded", init)
+        /*
+With one line of code we create a setInterval object and give it two parameters
+to use. The name of the function and the time between calls to that function.
+*/
+        var update_loop = setInterval(showInfo, 3000);
+    </script>
+</head>
+
+<body>
+
+    <div class="container col-xs-12" style="background-color:#EDEDED;">
+        <div class="col-xs-6" style="height:40%; background-color:#EDEDED;">
+            <h2>So far in our survey...</h2>
+
+            <ul class="list-unstyled">
+                <li><strong><h1 id="question1Average"></strong></h1>
+                </li>
+                <li>
+                    <h3>that early <u>User Experience</u> will give</h3>
+                </li>
+                <ul id="uxDoesList"><strong><h4>
                 </ul></strong></h4>
-              </li>
+                </li>
             </ul>
-              </div>
-                <div class="col-xs-6" style="background-color:#FFFFFF"><img src="https://volvouxsurvey.github.io/github_qr.png" style="height:auto;width:100%;"></div>
-            </div>
-            <div class="navbar navbar-fixed-bottom">
-              <h2 class="col-xs-12" align="center" style="background-color:#627890; color:#FFFFFF">Join the survey and the discussion now,</h2>      
-              <h2 class="col-xs-12" align="center" style="background-color:#627890; color:#FFFFFF">help us help you!</h2>     
-            </div> 
-            </body>
+        </div>
+        <div class="col-xs-6" style="background-color:#FFFFFF"><img src="github_qr.png" style="height:auto;width:100%;"></div>
+        <div id="numberOfRows"></div>
+        <ul id="testThing"></ul>
+    </div>
+    <div class="navbar navbar-fixed-bottom">
+        <h2 class="col-xs-12" align="center" style="background-color:#627890; color:#FFFFFF">Join the survey and the discussion
+            now,
+        </h2>
+        <h2 class="col-xs-12" align="center" style="background-color:#627890; color:#FFFFFF">help us help you!</h2>
+    </div>
+</body>
+
 </html>

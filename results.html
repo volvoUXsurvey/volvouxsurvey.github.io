@@ -1,68 +1,168 @@
 <html>
 
 <head>
-    <meta name="description" content="UX survey results">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IT EXPO - UX Survey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script src="tabletop.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart1);
-        google.charts.setOnLoadCallback(drawChart2);
-        function drawChart1() {
-            var data = google.visualization.arrayToDataTable([
-                ['Data', 'Results'],
-                ['Good', 23],
-                ["Okay", 7],
-                ['Poor', 4],
-            ]);
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="resultsStyle.css">
+    <!-- https://github.com/jsoma/tabletop -->
+    <script type="text/javascript">    
 
-            var options = {
-                title: 'People that have a good grasp of what User Experience is:',
-                pieHole: 0.6,
-                slices: {
-                    0: { color: "#007BFF" },
-                    1: { color: 'gray' },
-                    2: { color: 'lightgray' }
+
+        var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1VqMYRhizOulBRY428Gfun5mz3amPLZcVypb_PCIST00/edit?usp=sharing";
+
+        function init() {
+            Tabletop.init({
+                key: publicSpreadsheetUrl,
+                callback: showInfo,
+                simpleSheet: true
+            })
+            // Load the Visualization API and the corechart package.
+            google.charts.load('current', { 'packages': ['corechart'] });
+
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.charts.setOnLoadCallback(drawChart);
+        }
+
+        function createListItem(textToPrint) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(textToPrint);
+            node.appendChild(textnode);
+            document.getElementById("uxDoesList").appendChild(node);
+        }
+
+        var question1Agree = 0;
+        var question2Agree = 0;
+        var question3Agree = 0;
+        var question4Agree = 0;
+        var question5Agree = 0;
+        var question6Agree = 0;
+        var question7Agree = 0;
+        var question8Agree = 0;
+        var question9Agree = 0;
+        var question10Agree = 0;
+        var question11Agree = 0;
+        var question12Agree = 0;
+        var question13Agree = 0;
+
+        function showInfo(data, tabletop) {
+
+            // var answersPrinted = 0;
+            // var totalPercentage = 0;
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question1.indexOf("Agree") >= 0) {
+                    question1Agree++;
                 }
-            };
+            }
 
-            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-            chart.draw(data, options);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question2.indexOf("Agree") >= 0) {
+                    question2Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question3.indexOf("Agree") >= 0) {
+                    question3Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question5.indexOf("Agree") >= 0) {
+                    question5Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question6.indexOf("Agree") >= 0) {
+                    question6Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question7.indexOf("Agree") >= 0) {
+                    question7Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question8.indexOf("Agree") >= 0) {
+                    question8Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question9.indexOf("Agree") >= 0) {
+                    question9Agree++;
+                }
+            }
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question10.indexOf("Agree") >= 0) {
+                    question10Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question11.indexOf("Agree") >= 0) {
+                    question11Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question12.indexOf("Agree") >= 0) {
+                    question12Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question13.indexOf("Agree") >= 0) {
+                    question13Agree++;
+                }
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].question4.indexOf("Disagree") >= 0) {
+                    question4Agree++;
+                }
+            }
+
+            if (((question4Agree / data.length) * 100) >= 80) {
+                question4Agree = ((question4Agree / data.length) * 100);
+            }
 
 
+            totalPercentage = ((question1Agree + question2Agree + question3Agree + question6Agree + question7Agree + question8Agree + question9Agree + question10Agree + question11Agree + question12Agree + question13Agree) / (data.length * 11))*100;
+
+
+            document.getElementById("numberOfAnswers").innerHTML = "<strong>" + data.length + "</strong> people have answered the survey so far.";
+            document.getElementById("knowsUx").innerHTML = "<strong>" + Math.ceil(totalPercentage) + "%</strong> knows UX is valuable in their projects.";
+
+            document.getElementById("userNeedsDiscussion").innerHTML = "But <strong>" + Math.ceil(question4Agree) + "%</strong> still don't regularly discuss their users' needs.";
         }
 
-        function drawChart2() {
-      var data = google.visualization.arrayToDataTable([
-        ['Opinion', 'Similar', { role: 'style' } ],
-        ['Others', 10, 'color: gray'],
-        ['Similar', 14, 'color: #76A7FA'],
-      ]);
-      var options = {
-                title: 'Your responses are similar to:',
-            };
-      var chart = new google.visualization.BarChart(document.getElementById('barchart'));
-            chart.draw(data, options);
-        }
+        window.addEventListener("DOMContentLoaded", init)
     </script>
 </head>
 
 <body>
-        <div class="container">
-                <div class="jumbotron"class="col-xs-12" >
-                  <h1>Thank you!</h1>      
-                  <h2>Your participation is greatly appreciated. Below are some interesting facts.</h2>
-                </div>  
-                <div class="container" style="width:100%; height:100%; overflow: hidden; margin:0px;padding:0px;">
-                    <div id="barchart" class="col-xs-12" style="width:400px; height:420px; overflow: hidden;"></div>
-                    <div id="donutchart"class="col-xs-12" style="width:400px; height:420px; overflow: hidden;"></div>
-                </div>
-                <div class="jumbotron"class="col-xs-12" > 
-                        <h2>Not what you expected? Come by the booth and talk to us about it!</h2>
-                      </div>  
-            </div>
+    <div class="container">
+        <div class="col-xs-12">
+            <h1>Thank you!</h1>
+            <h2>Your participation is greatly appreciated. Below are some noteworthy facts.</h2>
+            <h2 id="numberOfAnswers"></h2>
+            <h2 id="knowsUx"></h2>
+            <h2 id="userNeedsDiscussion"></h2>
+            <div id="chart_div"></div>
+        </div>
+        <div class="col-xs-12">
+            <h2>Want to know more? Come by the booth and talk to us about it!</h2>
+        </div>
+    </div>
 </body>
 
 </html>
